@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('Admin/Side',[dashboardController::class,'adminSide'])->name('Admin.Dashboard');
+
 Route::get('Second/Step',[dashboardController::class,'second'])->name('User.Second.Step');
 
 

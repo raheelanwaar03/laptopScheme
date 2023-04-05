@@ -13,22 +13,25 @@ class dashboardController extends Controller
         return view('second');
     }
 
+    public function adminSide()
+    {
+        $users = UserWork::paginate(10);
+        return view('admin',compact('users'));
+    }
 
     public function store(Request $request)
     {
         $validated = $request->validate([
             'name' => 'required',
             'education' => 'required',
-            'laptop' => 'required',
-            'mobile' => 'required',
             'age' => 'required'
         ]);
 
         $user = new UserWork();
         $user->name = $validated['name'];
         $user->education = $validated['education'];
-        $user->laptop = $validated['laptop'];
-        $user->mobile = $validated['mobile'];
+        $user->laptop = $request->laptop;
+        $user->mobile = $request->mobile;
         $user->age = $validated['age'];
         $user->save();
         return redirect()->route('User.Second.Step');
