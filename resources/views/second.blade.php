@@ -406,9 +406,9 @@
                 دستیاب ہو جائے گا۔</p>
             <p class="tip">2. اس معلومات کو واٹس ایپ پر 15 دوستوں یا 5 گروپوں کے ساتھ شیئر کرنے کے لیے "SHARE" بٹن پر
                 کلک کریں تاکہ وہ بھی پروگرام سے آگاہ ہو سکیں!</p>
-            <p class="tip">3. پھر GREEN تصدیقی بار بھرنے کے بعد "VALIDATE" پر کلک کریں۔</p>
+            <p class="tip">3. پھر Blue تصدیقی بار بھرنے کے بعد "VALIDATE" پر کلک کریں۔</p>
             <p class="tip">4. آپ کو 15 منٹ کے اندر ایک تصدیقی ایس ایم ایس موصول ہوگا۔</p>
-            <button id="whatsapp"> بانٹیں</button>
+            <button id="whatsapp"> Share</button>
             <div class="barr">
                 <div class="fill">
                     <div id="fill2"></div>
@@ -431,7 +431,7 @@
         <div class="comments">
             <div class="counter">
                 <div class="reactions">
-                    <img class="like" src="../i.imgur.com/KVSxPlB.png" /> <img class="love"
+                    <img class="like" src="{{ asset('assets/1.png') }}" /> <img class="love"
                         src="../i.imgur.com/xp1ER6K.jpg" /> <img class="care" src="../i.imgur.com/X7zwjbp.png" />
                     <span id="likes">134K</span>
                 </div>
@@ -444,7 +444,7 @@
                         class="fa fa-share"></i> بانٹیں</span>
             </div>
             <div class="comment">
-                <img src="../i.imgur.com/hdowCP7.png" />
+                <img src="{{ asset('assets/2.png') }}" />
                 <div class="single-container">
                     <span class="user">Mary Mwikali</span>
                     <span class="text">
@@ -455,21 +455,21 @@
                         class="action liked"> پسند</span> · <span class="action"> جواب دیں۔</span></div>
             </div>
             <div class="comment">
-                <img src="../i.imgur.com/NGwTAiV.png" />
+                <img src="{{ asset('assets/3.png') }}" />
                 <div class="single-container"><span class="user">Jenisha Parmar</span> <span class="text"> میں نے
                         کبھی سوچا بھی نہیں تھا کہ میری زندگی میں یہ فضل ہو گا، بانی کا شکریہ۔</span></div>
                 <div class="buttons"><span class="time t2">2m</span> <span class="dot">·</span> <span
                         class="action liked"> پسند</span> · <span class="action"> جواب دیں۔</span></div>
             </div>
             <div class="comment reply">
-                <img src="../i.imgur.com/z72daPI.jpg" />
+                <img src="{{ asset('assets/5.jpg') }}" />
                 <div class="single-container"><span class="user">Dinesh Bhambhani</span> <span class="text"> آپ
                         نے مجھے جو لیپ ٹاپ دیا اس کا شکریہ، اللہ آپ کو سلامت رکھے۔</span></div>
                 <div class="buttons"><span class="time t1">1m</span> <span class="dot">·</span> <span
                         class="action liked"> پسند</span> · <span class="action"> جواب دیں۔</span></div>
             </div>
             <div class="comment">
-                <img src="../i.imgur.com/mrqQSmb.png" />
+                <img src="{{ asset('assets/4.jpg') }}" />
                 <div class="single-container"><span class="user">Sandra Jacob</span> <span class="text">❤️ بس
                         ہدایات پر عمل کریں اور آپ کو یہ سیدھا مل جائے گا... ابھی میرے پاس ہے۔ </span></div>
                 <div class="buttons"><span class="time t3">4m</span> <span class="dot">·</span> <span
