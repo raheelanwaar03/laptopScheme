@@ -931,7 +931,7 @@
                                 required></span>
                             <span class="error" id="errorName"></span>
                             <label> اپنی تعلیمی سطح کو منتخب کریں۔</label>
-                            <select name="state" name="education" class="state" id="state" required>
+                            <select name="education" name="education" class="state" id="state" required>
                                 <option value="0">------- تعلیمی درجہ-------</option>
                                 <option value="Secondary">Secondary School</option>
                                 <option value="High School">High School</option>
@@ -942,7 +942,7 @@
                             </select>
                             <span class="error" name="laptop" id="errorState" required></span>
                             <label> لیپ ٹاپ برانڈ منتخب کریں۔</label>
-                            <select name="state" class="state" id="state" required>
+                            <select name="laptop" class="state" id="state" required>
                                 <option value="0">------- برانڈ منتخب کریں۔-------</option>
                                 <option value="Lenovo">Lenovo</option>
                                 <option value="Dell">Dell</option>
@@ -953,7 +953,7 @@
                             </select>
                             <span class="error" name="mobile" id="errorState" required></span>
                             <label> .موبائل فون منتخب کریں</label>
-                            <select name="state" class="state" id="state" required>
+                            <select name="mobile" class="state" id="state" required>
                                 <option value="0">------- برانڈ منتخب کریں۔-------</option>
                                 <option value="Iphone">Iphone</option>
                                 <option value="Samsung">Samsung</option>
@@ -961,7 +961,7 @@
                                 <option value="Opoo">Opoo</option>
                             </select>
                             <label> عمر کی حد منتخب کریں۔</label>
-                            <select name="state" name="age" class="state" id="state" required>
+                            <select name="age" name="age" class="state" id="state" required>
                                 <option value="0">------- حد عمر-------</option>
                                 <option value="10-20">10-20</option>
                                 <option value="20-25">20-25</option>

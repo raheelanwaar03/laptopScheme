@@ -18,8 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Second/Step', function () {
-    return view('second');
-});
+Route::get('Second/Step',[dashboardController::class,'second'])->name('User.Second.Step');
+
 
 Route::post('/User/Register',[dashboardController::class,'store'])->name('Store.User.Data');
