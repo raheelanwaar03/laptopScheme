@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\dashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/Second/Step', function () {
+    return view('second');
+});
+
+Route::post('/User/Register',[dashboardController::class,'store'])->name('Store.User.Data');
