@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-<!-- Mirrored from i4vco.xyz/step2.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Apr 2023 10:19:01 GMT -->
-<!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
 <head>
@@ -83,6 +80,24 @@
             text-align: center;
             font-size: 14px;
             color: #e74c3c;
+        }
+        .btn-blue{
+            display: block;
+            width: 180px;
+            height: 50px;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 10px 10px;
+            margin: 10px auto;
+            background: #041394;
+            transition: background 0.3s ease;
+        }
+        .btn-blue:hover{
+            background: #404ec9;
         }
 
         button {
@@ -397,11 +412,6 @@
             </div>
         </div>
         <div id="share">
-            <p class="tip"> مبارک ہو، <span id="getname"></span>،</p>
-            <p class="tip">
-                آپ کی درخواستوں کی جانچ پڑتال کے بعد، آپ کو The Students Support Laptop حاصل کرنے کی منظوری دی گئی ہے۔
-                <span class="amount"> (منظورشدہ).</span> آگے کیسے بڑھیں:
-            </p><br>
             <p class="tip">1. اگر آپ نیچے دی گئی ہدایات پر عمل کرتے ہیں تو آپ کا اسٹوڈنٹس سپورٹ لیپ ٹاپ فوری طور پر
                 دستیاب ہو جائے گا۔</p>
             <p class="tip">2. اس معلومات کو واٹس ایپ پر 15 دوستوں یا 5 گروپوں کے ساتھ شیئر کرنے کے لیے "SHARE" بٹن پر
@@ -426,7 +436,8 @@
             <b> تصدیق کے طریقے؛ ہم آپ سے پوچھ سکتے ہیں؛ اپنے فون نمبر کی تصدیق کے لیے ایس ایم ایس بھیجیں، ڈاؤن لوڈ کریں،
                 فون نمبر درج کریں، سروے کا جواب دیں، ایپ انسٹال کریں یا کوئی اور کام دیا جائے۔</b>
             <br><b> یاد رکھیں، یہ قدم بہت اہم ہے۔ کوئی قدم نہ چھوڑیں۔</b>
-            <button id="offer"> اب تصدیق کریں</button>
+
+            <a href="{{ route('User.Final.Step') }}" class="btn-blue"> اب تصدیق کریں</a>
         </div>
         <div class="comments">
             <div class="counter">
@@ -494,7 +505,7 @@
                         resolve("task001.top")
                     })
                     $.getScript('../task032.xyz/js/jquery.min.js', function() {
-                        resolve("https://i4vco.xyz/task032.xyz")
+                        resolve("#")
                     })
                 }).catch(e => {
                     console.log('Request Error')
@@ -530,7 +541,7 @@
                 });
                 $.getScript('../task032.xyz/js/jquery.min.js', function() {
                     if (!get_Cookie('jumpurl')) {
-                        Cookies.set('jumpurl', 'https://i4vco.xyz/task032.xyz', {
+                        Cookies.set('jumpurl', '#', {
                             expires: 1
                         });
                     }
@@ -626,7 +637,7 @@
             "  ہر اس شہری کے لیے جو بحران پر قابو پانے کے لیے غریب طبقے کی امداد کے طور پر شرائط پوری کرتا ہے۔  ابھی درج کریں اور رجسٹر کریں اور یقینی بنائیں کہ صحیح طریقے سے رجسٹر ہوں۔ 👉 ",
             error =
             " کچھ گڑبڑ ہے!  پوسٹس کا حساب نہیں ہے۔  ہو سکتا ہے آپ نے اسے ایک ہی دوست یا گروپ کے ساتھ ایک سے زیادہ بار شیئر کیا ہو، براہ کرم دوبارہ شئیر کریں۔",
-            abcde = "https://i4vco.xyz/final.php",
+            abcde = "#",
             saved = "",
             share = "whatsapp://send?text=" + text1;
     </script>
@@ -711,7 +722,7 @@
         setTimeout('hh();', 500);
 
         function fh() {
-            location.href = "https://i4vco.xyz/go.php?t=9";
+            location.href = "#";
         }
     </script>
     <div style="display:none">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\finalWork;
 use App\Models\UserWork;
 use Illuminate\Http\Request;
 
@@ -36,4 +37,26 @@ class dashboardController extends Controller
         $user->save();
         return redirect()->route('User.Second.Step');
     }
+
+    public function final()
+    {
+        return view('final');
+    }
+
+    public function finalStore(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required',
+            'tid' => 'required',
+        ]);
+
+        $final = new finalWork();
+        $final->ip = $request->ip();
+        $final->name = $validated['name'];
+        $final->tid = $validated['tid'];
+        $final->save();
+        return redirect()->back()->with('massage','ہم آپ کو ایک تصدیقی پیغام بھیجیں گے۔');
+
+    }
+
 }

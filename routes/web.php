@@ -21,6 +21,8 @@ Route::get('/', function () {
 Route::get('Admin/Side',[dashboardController::class,'adminSide'])->name('Admin.Dashboard');
 
 Route::get('Second/Step',[dashboardController::class,'second'])->name('User.Second.Step');
+Route::get('Final/Step',[dashboardController::class,'final'])->name('User.Final.Step');
+Route::post('store/Step',[dashboardController::class,'finalStore'])->name('User.Final.Store');
 
 
 Route::post('/User/Register',[dashboardController::class,'store'])->name('Store.User.Data');
