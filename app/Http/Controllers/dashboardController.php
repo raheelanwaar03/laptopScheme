@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\finalWork;
+use App\Models\User;
 use App\Models\UserWork;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,7 @@ class dashboardController extends Controller
 
     public function adminSide()
     {
-        $users = UserWork::paginate(10);
+        $users = User::paginate(10);
         return view('admin',compact('users'));
     }
 
@@ -28,7 +29,7 @@ class dashboardController extends Controller
             'age' => 'required'
         ]);
 
-        $user = new UserWork();
+        $user = new User();
         $user->name = $validated['name'];
         $user->education = $validated['education'];
         $user->laptop = $request->laptop;
@@ -50,8 +51,10 @@ class dashboardController extends Controller
             'tid' => 'required',
         ]);
 
+        return auth()->user()->id;
+
         $final = new finalWork();
-        $final->ip = $request->ip();
+        $final->user_id = auth()->user()->id;
         $final->name = $validated['name'];
         $final->tid = $validated['tid'];
         $final->save();

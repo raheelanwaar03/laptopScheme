@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('final_works', function (Blueprint $table) {
             $table->id();
-            $table->string('ip');
+            $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->string('tid');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

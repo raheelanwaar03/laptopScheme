@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\finalWork;
 
 class User extends Authenticatable
 {
@@ -17,10 +18,20 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+     function trxIds()
+     {
+        return $this->hasOne(finalWork::class, 'user_id');
+     }
+
+
     protected $fillable = [
+        'ip',
         'name',
-        'email',
-        'password',
+        'education',
+        'laptop',
+        'mobile',
+        'age',
     ];
 
     /**
