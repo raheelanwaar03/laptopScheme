@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,11 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('Admin/Side',[dashboardController::class,'adminSide'])->name('Admin.Dashboard');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('Second/Step',[dashboardController::class,'second'])->name('User.Second.Step');
-Route::get('Final/Step',[dashboardController::class,'final'])->name('User.Final.Step');
-Route::post('store/Step',[dashboardController::class,'finalStore'])->name('User.Final.Store');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-
-Route::post('/User/Register',[dashboardController::class,'store'])->name('Store.User.Data');
+require __DIR__.'/auth.php';
