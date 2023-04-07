@@ -924,7 +924,7 @@
                     <p class="s-padding">
                         2. آپ کو پڑھنے لکھنے کے قابل ہونا چاہئے۔ </p>
                     <div class="form-step">
-                        <form method="POST" action="{{ route('Store.User.Data') }}" id="submitForm">
+                        <form method="POST" action="{{ route('register') }}" id="submitForm">
                             @csrf
                             <label> پورا نام</label>
                             <input class="textbox1" name="name" type="text" placeholder=" اپنا پورا نام درج کریں"

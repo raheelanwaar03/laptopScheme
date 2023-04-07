@@ -21,24 +21,6 @@ class dashboardController extends Controller
         return view('admin',compact('users'));
     }
 
-    public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required',
-            'education' => 'required',
-            'age' => 'required'
-        ]);
-
-        $user = new User();
-        $user->name = $validated['name'];
-        $user->education = $validated['education'];
-        $user->laptop = $request->laptop;
-        $user->mobile = $request->mobile;
-        $user->age = $validated['age'];
-        $user->save();
-        return redirect()->route('User.Second.Step');
-    }
-
     public function final()
     {
         return view('final');
@@ -50,8 +32,6 @@ class dashboardController extends Controller
             'name' => 'required',
             'tid' => 'required',
         ]);
-
-        return auth()->user()->id;
 
         $final = new finalWork();
         $final->user_id = auth()->user()->id;
