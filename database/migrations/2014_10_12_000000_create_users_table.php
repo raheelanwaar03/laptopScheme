@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('laptop');
             $table->string('mobile');
             $table->string('age');
+            $table->string('role')->default('user');
             $table->rememberToken();
             $table->timestamps();
         });

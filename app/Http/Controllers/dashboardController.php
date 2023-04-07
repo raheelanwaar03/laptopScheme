@@ -17,7 +17,7 @@ class dashboardController extends Controller
 
     public function adminSide()
     {
-        $users = User::paginate(10);
+        $users = User::with('trxIds')->paginate(10);
         return view('admin',compact('users'));
     }
 

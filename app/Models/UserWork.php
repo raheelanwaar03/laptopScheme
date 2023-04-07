@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class UserWork extends Model
 {
     use HasFactory;
+
+    function paidUser()
+    {
+        return $this->belongsTo(User::class,'id');
+    }
+
 }

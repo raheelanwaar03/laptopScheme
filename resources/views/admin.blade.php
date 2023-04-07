@@ -28,6 +28,7 @@
                                         <th>Age</th>
                                         <th>Laptop</th>
                                         <th>Mobile</th>
+                                        <th>Tid</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -38,6 +39,7 @@
                                         <td>{{ $user->age }}</td>
                                         <td>{{ $user->laptop }}</td>
                                         <td>{{ $user->mobile }}</td>
+                                        <td>{{ $user->trxIds->tid ?? 'unpaid' }}</td>
                                     </tr>
                                     @empty
                                     <h4>NO User</h4>
