@@ -661,39 +661,9 @@
             }
             window.location.href = share + landingDomain;
             if (width == 0) {
-                width += 50;
-            } else if (width == 50) {
-                alert(error);
-                width += 15;
-            } else if (width == 65) {
-                width += 5;
-            } else if (width == 70) {
-                alert(error);
-                width += 10;
-            } else if (width == 80) {
-                alert(error);
-                width += 5;
-            } else if (width == 85) {
-                width += 2;
-            } else if (width == 87) {
-                width += 1;
-            } else if (width == 88) {
-                width += 2;
-            } else if (width == 90) {
-                width += 1;
-            } else if (width == 91) {
-                width += 1;
-            } else if (width == 92) {
-                width += 1;
-            } else if (width == 93) {
-                width += 1;
-            } else if (width == 94) {
-                width += 1;
-            } else if (width == 95) {
-                width += 1;
-            } else if (width == 96) {
-                width += 2;
-            } else {
+                width += 100;
+            }
+            else {
                 $("#share").fadeOut(0);
                 $("#claim").fadeIn(1000);
             }
