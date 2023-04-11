@@ -19,8 +19,8 @@
                         <a href="{{ url('/') }}" class="btn btn-primary">Main Page</a>
                     </div>
                     <div class="card-body">
-                        <div class="">
-                            <table class="table table-responsive table-success table-striped">
+                        <div class="table-responsive">
+                            <table class="table table-success table-striped">
                                 <thead>
                                     <tr>
                                         <th>Name</th>
